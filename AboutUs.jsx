@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUs = () => {
   return (
-    <section className="about-us">
+    <div className="about-us-container">
       <h2>About Paradise Nursery</h2>
 
       <p>
@@ -17,11 +17,16 @@ const AboutUs = () => {
       </p>
 
       <p>
-        At Paradise Nursery, customers can browse plants, view product
-        details, add their favorite plants to the shopping cart, and
-        manage their purchases with ease.
+        Customers can browse different plant categories, view product
+        images, names, descriptions, and prices, add plants to their
+        shopping cart, and manage their purchases with ease.
       </p>
-    </section>
+
+      <p>
+        Paradise Nursery is committed to providing a convenient and
+        enjoyable online shopping experience for everyone who loves plants.
+      </p>
+    </div>
   );
 };
 
