@@ -1,28 +1,36 @@
-import React from "react";
-import "./App.css";
+import React, { useState } from "react";
+import ProductList from "./ProductList";
 
 function App() {
+  const [showProducts, setShowProducts] = useState(false);
+
   const handleGetStarted = () => {
-    console.log("Get Started clicked");
+    setShowProducts(true);
   };
 
   return (
-    <div className="landing-page">
-      <div className="landing-content">
-        <h1>Paradise Nursery</h1>
+    <div className="App">
+      {!showProducts ? (
+        <div className="landing-page">
+          <div className="landing-content">
+            <h1>Paradise Nursery</h1>
 
-        <p>
-          Welcome to Paradise Nursery, your online destination for
-          beautiful and healthy plants.
-        </p>
+            <p>
+              Welcome to Paradise Nursery, your online destination
+              for beautiful and healthy plants.
+            </p>
 
-        <button
-          className="get-started-button"
-          onClick={handleGetStarted}
-        >
-          Get Started
-        </button>
-      </div>
+            <button
+              className="get-started-button"
+              onClick={handleGetStarted}
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
+      ) : (
+        <ProductList />
+      )}
     </div>
   );
 }
